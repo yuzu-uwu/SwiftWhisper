@@ -21,26 +21,27 @@ let package = Package(
         .target(
             name: "WhisperCpp",
             path: "Sources/whisper.cpp",
-            exclude: [
-                "bindings",
-                "cmake",
-                "coreml",
-                "examples",
-                "extra",
-                "models",
-                "samples",
-                "tests",
-                "CMakeLists.txt",
-                "Makefile"
+             exclude: [
+               "bindings",
+               "cmake",
+               "coreml",
+               "examples",
+               "extra",
+               "models",
+               "samples",
+               "tests",
+               "CMakeLists.txt",
+               "ggml-cuda.cu",
+               "ggml-cuda.h",
+               "Makefile"
             ],
             sources: [
-                "ggml/src/ggml.c",
-                "src/whisper.cpp",
-                "ggml/src/ggml-aarch64.c",
-                "ggml/src/ggml-alloc.c",
-                "ggml/src/ggml-backend.c",
-                "ggml/src/ggml-quants.c",
-                "ggml/src/ggml-metal.m"
+                "ggml.c",
+                "whisper.cpp",
+                "ggml-alloc.c",
+                "ggml-backend.c",
+                "ggml-quants.c",
+                "ggml-metal.m"
             ],
             resources: [.process("ggml-metal.metal")],
             publicHeadersPath: "spm-headers",
