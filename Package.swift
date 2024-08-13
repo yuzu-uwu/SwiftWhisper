@@ -17,11 +17,10 @@ let package = Package(
             targets: ["SwiftWhisper"]),
     ],
     targets: [
-        .target(name: "SwiftWhisper", dependencies: [.target(name: "WhisperCpp")]),
+        .target(name: "SwiftWhisper", dependencies: [.target(name: "whisper_cpp")]),
         .target(
-            name: "WhisperCpp",
-            path: "Sources/whisper.cpp",
-             exclude: [
+            name: "whisper_cpp",
+            exclude: [
                "bindings",
                "cmake",
                "coreml",
