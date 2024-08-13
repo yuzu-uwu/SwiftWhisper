@@ -1,5 +1,5 @@
 import Foundation
-import WhisperCpp
+import whisper_cpp
 
 public class Whisper {
     private let whisperContext: OpaquePointer
